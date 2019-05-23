@@ -30,7 +30,10 @@ function createWindow() {
     let html = "html/index.html";
     if (process.argv.length > 2) {
         html = process.argv[2];
-        is_debug_mode = true;
+
+        if(process.argv[process.argv.length-1]=="--debug"){
+            is_debug_mode = true;
+        }
     }
 
     // ブラウザウィンドウの作成
