@@ -47,7 +47,9 @@ function createWindow() {
     // アプリケーションのindex.htmlの読み込み
     win.loadURL(main_html_path);
 
-    if(is_debug_mode){
+    if(process.env.SPECTRON == "true") {
+        win.webContents.closeDevTools();
+    }else if(is_debug_mode){
         // DevToolsを開く
         win.webContents.openDevTools();
     }

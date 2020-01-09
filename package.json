@@ -16,7 +16,8 @@
     "ava": "^2.4.0",
     "electron": "^6.1.7",
     "nock": "^11.7.1",
-    "sinon": "^8.0.2"
+    "sinon": "^8.0.2",
+    "spectron": "^8.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
