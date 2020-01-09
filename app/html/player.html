@@ -15,22 +15,11 @@
     <player-main-page></player-main-page>
 </body>
 <script src="../../node_modules/riot/riot+compiler.min.js"></script>
-<script type="riot/tag" src="../tags/player-main-page.tag"></script>
-<script type="riot/tag" src="../tags/modal-dialog.tag"></script>
-<script type="riot/tag" src="../tags/player-tags.tag"></script>
-<script type="riot/tag" src="../tags/player-seek.tag"></script>
-<script type="riot/tag" src="../tags/player-volume.tag"></script>
-<script type="riot/tag" src="../tags/player-controls.tag"></script>
-<script type="riot/tag" src="../tags/player-video.tag"></script>
-<script type="riot/tag" src="../tags/player-page.tag"></script>
-<script type="riot/tag" src="../tags/player-viewinfo-page.tag"></script>
-<script type="riot/tag" src="../tags/comment-setting-dialog.tag"></script>
-<script type="riot/tag" src="../tags/comment-ng-setting.tag"></script>
-<script type="riot/tag" src="../tags/comment-display-setting.tag"></script>
-<script type="riot/tag" src="../tags/open-video-form.tag"></script>
-
 <script>
     /* globals riot */
+    const { load_player_rtags } = require("../load-riot-tags");
+    load_player_rtags("../tags");
+
     const {remote} = require("electron");
     var app_base_dir = remote.getGlobal("sharedObj").base_dir; // eslint-disable-line
     const obs = riot.observable();

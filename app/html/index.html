@@ -15,20 +15,11 @@
         <main-page></main-page>
     </body>
     <script src="../../node_modules/riot/riot+compiler.min.js"></script>
-    <script type="riot/tag" src="../tags/main-page.tag"></script>
-    <script type="riot/tag" src="../tags/accordion.tag"></script>
-    <script type="riot/tag" src="../tags/pagination.tag"></script>
-    <script type="riot/tag" src="../tags/modal-dialog.tag"></script>
-    <script type="riot/tag" src="../tags/library-page.tag"></script>
-    <script type="riot/tag" src="../tags/search-page.tag"></script>
-    <script type="riot/tag" src="../tags/download-schedule-dialog.tag"></script>
-    <script type="riot/tag" src="../tags/download-page.tag"></script>
-    <script type="riot/tag" src="../tags/play-history.tag"></script>
-    <script type="riot/tag" src="../tags/setting-page.tag"></script>
-    <script type="riot/tag" src="../tags/mylist-page.tag"></script>
-    <script type="riot/tag" src="../tags/bookmark-page.tag"></script>
     <script>
         /* globals riot */
+        const { load_main_rtags } = require("../load-riot-tags");
+        load_main_rtags("../tags");
+
         const path = require("path");
         const { IPCMain } = require("../js/ipc-monitor");
         const { remote } = require("electron");
