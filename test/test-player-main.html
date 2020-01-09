@@ -52,7 +52,7 @@
 </body>
 
 <script src="../node_modules/riot/riot+compiler.min.js"></script>
-<script type="riot/tag" src="../app/tags/player-main-page.tag"></script>
+<!-- <script type="riot/tag" src="../app/tags/player-main-page.tag"></script>
 <script type="riot/tag" src="../app/tags/modal-dialog.tag"></script>
 <script type="riot/tag" src="../app/tags/player-tags.tag"></script>
 <script type="riot/tag" src="../app/tags/player-seek.tag"></script>
@@ -64,9 +64,12 @@
 <script type="riot/tag" src="../app/tags/comment-setting-dialog.tag"></script>
 <script type="riot/tag" src="../app/tags/comment-ng-setting.tag"></script>
 <script type="riot/tag" src="../app/tags/comment-display-setting.tag"></script>
-<script type="riot/tag" src="../app/tags/open-video-form.tag"></script>
+<script type="riot/tag" src="../app/tags/open-video-form.tag"></script> -->
 <script>
     /* globals riot */
+    const { load_player_rtags } = require("../app/load-riot-tags");
+    load_player_rtags("../app/tags");
+
     const path = require("path");
     const fs = require("fs");
     require("./app-quit");
